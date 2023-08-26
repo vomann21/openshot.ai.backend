@@ -1,11 +1,4 @@
-###
-POST http://localhost:3015/auth/signin
-Content-Type: application/json
 
-{
-    "username":"vomann",
-    "password":"vomann"
-}
 
 ###
 POST http://localhost:3015/auth/login
@@ -22,6 +15,32 @@ POST http://localhost:3015/auth/verify-otp
 Content-Type: application/json
 
 {
-    "email":"nagasainithin37@gmail.com",
-    "otp":"592045"
+    "email":"tvomann2121@gmail.com",
+    "otp":"664820"
+}
+
+
+###
+GET http://localhost:3015/booking/get-empty-slots?date=28-8-2023
+
+
+###
+POST http://localhost:3015/booking/book-slot
+Content-Type: application/json
+
+{
+    "date":"28-8-2023",
+    "slotIdx":3,
+    "email":"tvomann2121@gmail.com"
+}
+
+
+###
+POST http://localhost:3015/booking/cancel-booking
+Content-Type: application/json
+
+{
+    "date":"28-8-2023",
+    "slotIdx":3,
+    "email":"tvomann2121@gmail.com"
 }
